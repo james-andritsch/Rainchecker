@@ -63,10 +63,12 @@ function mainPage() {
                 const fTempElement = document.createElement("p");
                 fTempElement.innerHTML = "Temp: " + k2f(response.data.list[fIndex].main.temp) + " &#176F";
                 fData[i].append(fTempElement);
-                
+                const fHumidityElement = document.createElement("p");
+                fHumidityElement.innerHTML = "Humidity: " + response.data.list[fIndex].main.humidity + "%";
+                fData[i].append(fHumidityElement);
             }
         })
-    }
+    });
     
 };
 mainPage()
